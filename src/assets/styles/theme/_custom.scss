@@ -1,0 +1,29 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$headings-font-family: 'Rubik', sans-serif;
+
+$input-bg: #F8F8FD;
+$form-select-bg: #F8F8FD;
+$input-group-addon-bg: #F8F8FD;
+$input-border-color: #EAEAEA;
+$form-select-border-color: #EAEAEA;
+$input-group-addon-border-color: #EAEAEA;
+$input-placeholder-color: #ABB4C5;
+$form-select-color: #ABB4C5;
+
+$input-group-addon-color: #727D91;
+
+$primary: #0CB8C6;
+$secondary: #FFBD76;
+$tertiary: #025162;
+
+$theme-colors:map-merge($theme-colors, (
+  "primary": $primary,
+  "secondary": $secondary,
+  "tertiary": $tertiary
+));
+
+@import "~bootstrap/scss/bootstrap";

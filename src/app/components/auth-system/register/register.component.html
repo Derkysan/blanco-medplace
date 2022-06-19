@@ -1,0 +1,61 @@
+<div class="auth-system-wrapper">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
+      <div class="col-12 col-md-7">
+        <div class="banner">
+          <button type="button" routerLink="/login" class="btn btn-link">
+            <img src="assets/svg/logo-medplace.svg" width="230" alt="" srcset="">
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-md-5">
+        <div class="d-flex"></div>
+        <div class="card fc-2 mb-5">
+          <div class="animate__animated animate__fadeIn">
+            <div class="card-body px-4 py-5">
+              <h4 class="card-title fc-1 fw-semibold">Registro</h4>
+              <p class="mb-4">Por favor ingrese sus datos para registrarse.</p>
+
+              <form>
+                <div class="form-group mb-3">
+                  <label for="name">Nombre</label>
+                  <input type="name" class="form-control" autocomplete="off" id="name" formControlName="name" placeholder="Nombre">
+                </div>
+                <div class="form-group mb-3">
+                  <label for="lastName">Apellido</label>
+                  <input type="lastName" class="form-control" autocomplete="off" id="lastName" formControlName="lastName" placeholder="Apellido">
+                </div>
+                <div class="form-group mb-3">
+                  <label for="clinicName">Nombre de la clínica</label>
+                  <select class="form-select" aria-label="nombre de a clínica">
+                    <option selected>- Seleccione -</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group mb-3">
+                  <label for="clinicName">Dirección de la clínica</label>
+                  <select class="form-select" aria-label="Dirección de la clínica">
+                    <option selected>- Seleccione -</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="form-group mb-4">
+                  <label for="password">Contraseña</label>
+                  <div class="input-group">
+                    <input [type]="hide ? 'password' : 'text'" class="form-control border-end-0" autocomplete="off" id="password" formControlName="email" placeholder="Ingrese su contraseña">
+                    <span type="button" class="input-group-text" (click)="hide = !hide"><fa-icon [icon]=" hide ? faEyeSlash : faEye"></fa-icon></span>
+                  </div>
+                </div>
+                <button type="button" class="btn btn-primary w-100 text-white">Iniciar sesión</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

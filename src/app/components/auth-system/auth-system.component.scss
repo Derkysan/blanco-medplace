@@ -1,0 +1,40 @@
+.auth-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  img {
+    &.bg-auth-system {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+  }
+  ::ng-deep {
+    .auth-system-wrapper {
+      width: 100%;
+      height: 100%;
+      padding: 2em 0;
+      overflow: auto;
+      position: relative;
+      padding: 2em;
+      z-index: 1;
+      .banner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .card {
+        border: 0;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
