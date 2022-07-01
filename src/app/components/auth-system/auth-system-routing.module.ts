@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthSystemComponent } from './auth-system.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { PasswordRecoveryComponent } from './password-recovery/password-recovery.component';
 
 const routes: Routes = [
   {
@@ -10,15 +11,19 @@ const routes: Routes = [
     component: AuthSystemComponent,
     children: [
       {
-        path: 'login',
+        path: '',
         component: LoginComponent
       },
       {
         path: 'register',
         component: RegisterComponent
+      },
+      {
+        path: 'password-recovery',
+        component: PasswordRecoveryComponent
       }
     ]
-  },
+  }
 ];
 
 @NgModule({
