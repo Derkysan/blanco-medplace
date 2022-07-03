@@ -1,0 +1,129 @@
+.menu-sidebar-wrapper {
+  width: 70px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  transition: all 0.25s linear;
+  .close-menu {
+    color: #C5C5C5;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    opacity: 0;
+    padding: 0;
+    width: 1em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    transition: all 0.25s linear;
+    justify-content: center;
+    z-index: -5;
+  }
+  .menu-header {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      &.btn-side-menu {
+        border-radius: 0;
+        width: 70px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    li {
+      button {
+        &.btn-side-menu {
+          padding: 0;
+          border-radius: 0;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          white-space: nowrap;
+          align-items: center;
+          justify-content: flex-start;
+          text-align: left;
+          border: 0;
+          color: #4F5B67;
+          transition: all .25s linear;
+          .icon {
+            width: 70px;
+            display: flex;
+            flex-shrink: 0;
+            justify-content: center;
+            align-items: center;
+            .off {
+              display: block;
+            }
+            .on {
+              display: none;
+            }
+          }
+          &:hover,
+          &.active {
+            transition: all .25s linear;
+            background-color: #07B2C5;
+            color: #ffffff;
+            .icon {
+              .off {
+                display: none;
+              }
+              .on {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .menu-footer {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    opacity: 0;
+    padding: 0 1em;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid #f1f1f1;
+    transition: all 0.25s linear;
+    button {
+      border: 0;
+      white-space: nowrap;
+    }
+  }
+  &.opened {
+    width: 250px;
+    transition: all 0.25s linear;
+    .close-menu {
+      z-index: 0;
+      opacity: 1;
+      visibility: visible;
+      transition: all 0.25s linear;
+    }
+    .menu-footer {
+      opacity: 1;
+      transition: all 0.25s linear;
+    }
+  }
+}

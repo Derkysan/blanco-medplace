@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   faEyeSlash = faEyeSlash;
   faCoffee = faCoffee;
 
-  hide = true;
+  hide = false;
 
   constructor( private router: Router) { }
 

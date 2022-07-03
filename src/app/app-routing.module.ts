@@ -7,8 +7,8 @@ const routes: Routes = [
     loadChildren: () => import('./components/auth-system/auth-system.module').then(m => m.AuthSystemModule)
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('./components/dashboard/dashboard.module').then(m => m.DashboardModule)
+    path: 'admin',
+    loadChildren: () => import('./components/admin/admin.module').then(m => m.AdminModule)
   }
 ];
 

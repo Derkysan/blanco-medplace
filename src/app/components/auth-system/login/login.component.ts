@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.router.navigateByUrl('/dashboard');
+    this.router.navigateByUrl('/admin');
     // Swal.fire({
     //   timer: 3000,
     //   showConfirmButton: false,

@@ -1,0 +1,39 @@
+<div class="menu-sidebar-wrapper animate__animated animate__fadeIn" [ngClass]="{'opened': opened}">
+
+  <button type="button" class="btn btn-link close-menu" (click)="closeMenu()">
+    <fa-icon [icon]="faXmark"></fa-icon>
+  </button>
+
+  <div class="menu-header">
+    <button
+      type="button"
+      class="btn btn-side-menu"
+      (click)="openMenu()">
+      <img src="assets/svg/icon-menu.svg" alt="icon menu">
+    </button>
+  </div>
+  <ul>
+
+    <div *ngFor="let menu of sideMenu">
+      <li>
+        <button type="button" class="btn btn-side-menu " [routerLink]="[ menu.url ]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <span class="icon">
+            <img class="off" src="{{pathURL + menu.icon + '.svg'}}" alt="">
+            <img class="on" src="{{pathURL + menu.icon + '-active' + '.svg'}}" alt="">
+          </span>
+          <span *ngIf="opened">{{menu.name}}</span>
+        </button>
+      </li>
+    </div>
+
+
+  </ul>
+  <div class="menu-footer">
+    <button
+      type="button"
+      class="btn btn-primary btn-sm text-white"
+      (click)="logOut()">
+        Cerrar sesión
+    </button>
+  </div>
+</div>
