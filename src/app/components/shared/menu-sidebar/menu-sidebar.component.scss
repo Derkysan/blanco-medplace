@@ -4,7 +4,6 @@
   overflow: hidden;
   background-color: #ffffff;
   border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
   box-shadow: 0 4px 4px 0 rgba($color: #000000, $alpha: 0.25);
   position: fixed;
   top: 0;
@@ -14,6 +13,7 @@
   align-items: flex-start;
   justify-content: space-between;
   transition: all 0.25s linear;
+  z-index: 2;
   .close-menu {
     color: #C5C5C5;
     position: absolute;
@@ -81,7 +81,7 @@
           }
           &:hover,
           &.active {
-            transition: all .25s linear;
+            transition: all .05s linear;
             background-color: #07B2C5;
             color: #ffffff;
             .icon {
@@ -114,7 +114,7 @@
   }
   &.opened {
     width: 250px;
-    transition: all 0.25s linear;
+    transition: all 0.1s linear;
     .close-menu {
       z-index: 0;
       opacity: 1;

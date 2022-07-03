@@ -1,0 +1,31 @@
+.date {
+  font-size: .85em;
+}
+
+.card {
+  &.data {
+    height: 180px;
+    border-radius: 12px;
+    padding: 1em;
+    border-color: #EBEBEB;
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      p {
+        font-size: 20px;
+        margin: 0;
+        &.results {
+          display: flex;
+          justify-content: space-between;
+          font-size: 18px;
+        }
+      }
+    }
+    &.active {
+      background-color: #11BCCC;
+      border-color: #11BCCC;
+      color: #ffffff;
+    }
+  }
+}

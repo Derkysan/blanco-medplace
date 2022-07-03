@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -8,6 +8,8 @@ import { faXmark } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./menu-sidebar.component.scss']
 })
 export class MenuSidebarComponent implements OnInit {
+
+  @HostListener('window:scroll', ['$event'])
 
   faXmark = faXmark;
 
@@ -72,6 +74,10 @@ export class MenuSidebarComponent implements OnInit {
 
   logOut() {
     this.router.navigate(['/']);
+  }
+
+  onScroll(event: any) {
+    alert('Scrolled!');
   }
 
 }
