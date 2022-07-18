@@ -8,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProfileImageIconComponent implements OnInit {
 
   @Input() imgURL: string = 'https://via.placeholder.com/150';
+  @Input() nameProfile: string = '';
+  @Input() sizePX: number = 30;
 
   constructor() { }
 

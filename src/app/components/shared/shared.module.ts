@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MenuHeaderComponent } from './menu-header/menu-header.component';
 import { MenuSidebarComponent } from './menu-sidebar/menu-sidebar.component';
 import { ProfileImageIconComponent } from './profile-image-icon/profile-image-icon.component';
+import { HeaderPageComponent } from './header-page/header-page.component';
 
 
 
@@ -12,7 +13,8 @@ import { ProfileImageIconComponent } from './profile-image-icon/profile-image-ic
   declarations: [
     MenuHeaderComponent,
     MenuSidebarComponent,
-    ProfileImageIconComponent
+    ProfileImageIconComponent,
+    HeaderPageComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +25,8 @@ import { ProfileImageIconComponent } from './profile-image-icon/profile-image-ic
     FontAwesomeModule,
     MenuHeaderComponent,
     MenuSidebarComponent,
-    ProfileImageIconComponent
+    ProfileImageIconComponent,
+    HeaderPageComponent
   ]
 })
 export class SharedModule { }

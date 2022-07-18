@@ -1,6 +1,4 @@
-.table-simple-wrapper {
-  // border: 1px solid blue;
-}
+// .table-simple-wrapper {}
 
 .table-control {
   display: flex;
@@ -20,28 +18,33 @@
       white-space: nowrap;
       .form-control {
         height: 35px;
+        &.search-field {
+          font-size: .75em;
+          background-color: #ffffff;
+        }
       }
     }
   }
 }
 .table-header {
-  background-color: #B9B9B9;
+  background-color: rgba(185, 185, 185, .2);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  font-weight: 700;
 }
-.table-body {
-  // border: 1px solid pink;
-}
+
+// .table-body {}
+
 .table-row {
   height: 50px;
   display: flex;
+  padding: 0 1em;
   align-items: center;
   gap: 1em;
-  // border: 1px solid purple;
+  border-top: 1px solid #E8E8E8;
 }
 .table-col {
-  flex-grow: 1;
   display: flex;
-  // justify-content: center;
-  border: 1px solid green;
   justify-content: flex-start;
 }
 
@@ -49,6 +52,11 @@
   background-color: #FFFFFF;
   border: 1px solid #D0D0D0;
   height: 35px;
+  font-size: .75em;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: .5em;
 }
 
 
@@ -84,14 +92,14 @@
     width: 18px;
     border-radius: 2px;
     background-color: #FFFFFF;
-    border: 2px solid #C4C4C4;
+    border: 1px solid #C4C4C4;
     &:after {
       content: "";
       position: absolute;
       display: none;
     }
     &:after {
-      left: 4px;
+      left: 5px;
       top: 0px;
       width: 6px;
       height: 12px;
@@ -100,6 +108,33 @@
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
+    }
+  }
+}
+
+.table-simple-wrapper {
+  &.profile {
+    .table-col {
+     &:nth-child(1) {
+      width: 5%;
+      // border: 1px solid red;
+     }
+     &:nth-child(2) {
+      width: 25%;
+      // border: 1px solid red;
+    }
+    &:nth-child(3) {
+      width: 30%;
+      // border: 1px solid red;
+    }
+    &:nth-child(4) {
+       width: 20%;
+      //  border: 1px solid red;
+      }
+      &:nth-child(5) {
+       width: 20%;
+       justify-content: end;
+     }
     }
   }
 }

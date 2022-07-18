@@ -1,4 +1,4 @@
-<div class="menu-sidebar-wrapper animate__animated animate__fadeIn" [ngClass]="{'opened': opened}" (scroll)="onScroll($event)">
+<div class="menu-sidebar-wrapper animate__animated animate__fadeIn" [ngClass]="{'opened': opened}">
 
   <button type="button" class="btn btn-link close-menu" (click)="closeMenu()">
     <fa-icon [icon]="faXmark"></fa-icon>
@@ -16,13 +16,7 @@
 
     <div *ngFor="let menu of sideMenu">
       <li>
-        <button
-          type="button"
-          class="btn btn-side-menu"
-          [routerLink]="[ menu.url ]"
-          routerLinkActive="active"
-          [routerLinkActiveOptions]="{exact: true}"
-          (click)="closeMenu()">
+        <button type="button" class="btn btn-side-menu " [routerLink]="[ menu.url ]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
           <span class="icon">
             <img class="off" src="{{pathURL + menu.icon + '.svg'}}" alt="">
             <img class="on" src="{{pathURL + menu.icon + '-active' + '.svg'}}" alt="">
@@ -38,7 +32,6 @@
     <button
       type="button"
       class="btn btn-primary btn-sm text-white"
-      [disabled]="!opened"
       (click)="logOut()">
         Cerrar sesión
     </button>

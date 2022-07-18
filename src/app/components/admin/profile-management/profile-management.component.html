@@ -1,21 +1,11 @@
-<div class="greeting-box-wrapper">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col">
-        <h5 class="m-0">Hola Claudia,</h5>
-        <p class="m-0">Acá puedes gestionar los perfiles.</p>
-      </div>
-      <div class="col"></div>
-    </div>
-  </div>
-</div>
+<app-header-page></app-header-page>
 
 <div class="page-content-wrapper animate__animated animate__fadeIn">
   <div class="container">
     <div class="row">
       <div class="col">
 
-        <div class="table-simple-wrapper">
+        <div class="table-simple-wrapper profile">
           <div class="table-control">
             <div class="control-side">
               <h5>Gestión de perfiles</h5>
@@ -23,12 +13,19 @@
             <div class="control-side">
 
               <form>
-                <input type="text" class="form-control" autocomplete="off" id="search" formControlName="search" placeholder="Buscar usuario">
+                <input
+                  type="text"
+                  class="form-control search-field"
+                  autocomplete="off"
+                  id="search"
+                  formControlName="search"
+                  placeholder="Buscar usuario"
+                  />
                 <button type="button" class="btn btn-light btn-sm btn-control">
-                  <img src="assets/svg/icon-user-delete.svg" alt=""> Eliminar usuarios
+                  <img src="assets/svg/icon-user-delete.svg" width="20" alt="icono Eliminar"> Eliminar usuarios
                 </button>
                 <button type="button" class="btn btn-light btn-sm btn-control">
-                  <img src="assets/svg/icon-user-add.svg" alt=""> Nuevo usuario
+                  <img src="assets/svg/icon-user-add.svg" width="18" alt="icono Nuevo"> Nuevo usuario
                 </button>
               </form>
 
@@ -38,7 +35,7 @@
             <div class="table-row">
               <div class="table-col justify-content-center" style="max-width: 4em;">
                 <label class="checkbox-wrapper">
-                  <input type="checkbox" checked="checked">
+                  <input type="checkbox">
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -57,18 +54,35 @@
           </div>
 
           <div class="table-body">
+
             <div class="table-row">
               <div class="table-col justify-content-center" style="max-width: 4em;">
                 <label class="checkbox-wrapper">
-                  <input type="checkbox" checked="checked">
+                  <input type="checkbox">
                   <span class="checkmark"></span>
                 </label>
               </div>
               <div class="table-col">col</div>
               <div class="table-col">col</div>
               <div class="table-col">col</div>
-              <div class="table-col">col</div>
+              <div class="table-col">
+                <div class="actions">
+                  <button
+                    type="button"
+                    class="btn btn-link"
+                    (click)="editProfile($event)">
+                    <img src="assets/svg/icon-edit.svg" alt="icono editar">
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-link"
+                    (click)="deleteProfile($event)">
+                    <img src="assets/svg/icon-delete.svg" alt="icono borrar">
+                  </button>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 

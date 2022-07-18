@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth-system',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthSystemComponent implements OnInit {
 
-  constructor() { }
+  constructor( public router: Router){
+    console.log(router.url);
 
-  ngOnInit(): void {
   }
+
+  ngOnInit(): void {}
+
 
 }

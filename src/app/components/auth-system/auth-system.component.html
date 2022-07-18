@@ -1,21 +1,21 @@
 <div class="auth-wrapper bg-primary">
   <img src="assets/images/medicina_ 1.png" class="bg-auth-system" alt="bg-login">
   <div class="auth-system-wrapper">
-    <div class="container-fluid">
+    <div class="container-fluid h-100">
       <div class="row h-100">
         <div class="col-12 col-md-7">
           <div class="banner">
             <button type="button" class="btn btn-link">
               <img src="assets/svg/logo-medplace.svg" width="230" alt="" srcset="">
             </button>
-            <div class="text-white animate__animated animate__fadeIn">
+            <div class="text-white animate__animated animate__fadeIn" *ngIf="router.url === '/'">
               <h2>Bienvenido a nuestra plataforma</h2>
               <p class="mb-5">Puedes gestionar los turnos de tus empleados de manera fácil y rápida.</p>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-5">
-          <div class="card fc-2">
+        <div class="col-12 col-md-5 d-flex align-items-center">
+          <div class="card w-100 fc-2">
             <div class="animate__animated animate__fadeIn">
 
               <div class="card-body px-4 py-5">

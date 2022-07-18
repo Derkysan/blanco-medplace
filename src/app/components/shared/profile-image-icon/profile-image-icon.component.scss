@@ -1,13 +1,19 @@
-.profile-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  overflow: hidden;
-  border: 1px solid #ffffff;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+.profile {
+  display: flex;
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #ffffff;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  .name {
+    margin-left: 1em;
   }
 }

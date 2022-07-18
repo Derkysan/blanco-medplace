@@ -13,10 +13,10 @@ const routes: Routes = [
         path: '',
         component: DashboardComponent,
       },
-      {
-        path: 'profile-management',
-        component: ProfileManagementComponent,
-      }
+      // {
+      //   path: 'profile-management',
+      //   component: ProfileManagementComponent,
+      // }
     ]
   }
 ];

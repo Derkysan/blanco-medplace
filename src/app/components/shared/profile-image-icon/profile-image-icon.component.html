@@ -1,3 +1,10 @@
-<div class="profile-icon">
-  <img [src]="imgURL" alt="icon image">
+<div class="profile">
+  <div
+    class="profile-icon"
+    [ngStyle]="{'width': sizePX + 'px', 'height': sizePX + 'px', 'borderRadius': sizePX / 2 + 'px' }">
+      <img [src]="imgURL" alt="icon image">
+  </div>
+  <span class="name" *ngIf="nameProfile != ''">
+    {{ nameProfile }}
+  </span>
 </div>

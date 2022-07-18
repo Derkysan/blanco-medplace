@@ -24,14 +24,16 @@ export class RegisterComponent implements OnInit {
   register() {
     Swal.fire({
       title: '¡Su cuenta ha sido creada exitosamente!',
-      text: 'Ahora solo debes activar tu cuenta y completar tu perfil profesional.',
+      text: "Ahora solo debes activar tu cuenta y completar tu perfil profesional.",
       icon: 'success',
       confirmButtonText: 'Aceptar',
       confirmButtonColor: '#089BAB',
       showCloseButton: false,
+      buttonsStyling: false,
       customClass: {
-        title: 'popup-title'
-      }
+        htmlContainer: 'text-center my-3',
+        confirmButton: 'btn btn-primary text-white w-100',
+      },
     }).then(() => {
       this.router.navigateByUrl('/')
     })

@@ -16,15 +16,17 @@ export class PasswordRecoveryComponent implements OnInit {
 
   recover() {
     Swal.fire({
-      title: '¡Su contraseña ha sido restaurada exitosamente!',
+      title: 'El correo ha sido enviado',
+      text: 'Revise el correo franciscog@davila.cl y complete los pasos para recuperar su contraseña.',
       icon: 'success',
       confirmButtonText: 'Aceptar',
       confirmButtonColor: '#089BAB',
       showCloseButton: false,
+      buttonsStyling: false,
       customClass: {
+        htmlContainer: 'text-center my-3',
         confirmButton: 'btn btn-primary text-white w-100',
       },
-      buttonsStyling: false
     }).then(() => {
       this.router.navigateByUrl('/')
     })

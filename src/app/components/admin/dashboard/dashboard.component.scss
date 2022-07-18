@@ -3,17 +3,25 @@
 }
 
 .card {
-  &.data {
-    height: 180px;
-    border-radius: 12px;
-    padding: 1em;
+  &.box {
     border-color: #EBEBEB;
+    border-radius: 12px;
+    .card-body {
+      padding: 1.5em;
+      p {
+        &.title-card {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  &.data {
+    height: 135px;
     .card-body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       p {
-        font-size: 20px;
         margin: 0;
         &.results {
           display: flex;
@@ -26,6 +34,47 @@
       background-color: #11BCCC;
       border-color: #11BCCC;
       color: #ffffff;
+    }
+  }
+}
+
+.user-list {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2em;
+    li {
+      padding: .5em 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 1em;
+    }
+  }
+}
+
+.download-list {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1em;
+    li {
+      padding: .5em 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 1em;
+      span {
+        flex-shrink: 0;
+        width: calc( 70% - 40px );
+        &.icon {
+          width: 40px;
+          flex-shrink: 0;
+          display: inline-flex;
+          justify-content: center;
+        }
+      }
+
     }
   }
 }

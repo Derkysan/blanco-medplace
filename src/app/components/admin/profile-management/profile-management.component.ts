@@ -12,4 +12,11 @@ export class ProfileManagementComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  editProfile(event: Event) {
+    console.log('editProfile', event);
+  }
+  deleteProfile(event: Event) {
+    console.log('deleteProfile', event);
+  }
+
 }

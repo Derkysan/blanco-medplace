@@ -1,46 +1,36 @@
-<div class="greeting-box-wrapper">
-  <div class="container h-100">
-    <div class="row h-100 align-items-center">
-      <div class="col">
-        <h5 class="m-0">Hola Claudia,</h5>
-        <p class="m-0">Acá puedes gestionar los perfiles.</p>
-      </div>
-      <div class="col">
-        <div class="date text-end">
-          <p class="mb-0">23 de Marzo, 2022</p>
-          <p class="mb-0">09:00 AM</p>
-        </div>
-      </div>
-    </div>
+<app-header-page>
+  <div class="date text-end">
+    <p class="mb-0">23 de Marzo, 2022</p>
+    <p class="mb-0">09:00 AM</p>
   </div>
-</div>
+</app-header-page>
 
 <div class="page-content-wrapper animate__animated animate__fadeIn">
   <div class="container">
     <div class="row mb-4">
 
       <div class="col">
-        <div class="card data active">
+        <div class="card box data active">
           <div class="card-body">
-            <p>Turnos publicados</p>
+            <p class="title-card">Turnos publicados</p>
             <p class="results">90 Turnos</p>
           </div>
         </div>
       </div>
 
       <div class="col">
-        <div class="card data">
+        <div class="card box data">
           <div class="card-body">
-            <p>Turnos confirmados</p>
+            <p class="title-card">Turnos confirmados</p>
             <p class="results">80</p>
           </div>
         </div>
       </div>
 
       <div class="col">
-        <div class="card data">
+        <div class="card box data">
           <div class="card-body">
-            <p>Turnos pendientes</p>
+            <p class="title-card">Turnos pendientes</p>
             <p class="results">
               <span>10</span>
               <span> 11,1% <fa-icon [icon]="faArrowUp" style="color: #B4D57F;"></fa-icon></span>
@@ -51,8 +41,54 @@
 
     </div>
     <div class="row">
-      <div class="col-4">...</div>
-      <div class="col">...</div>
+      <div class="col-4">
+        <div class="card box">
+          <div class="card-body">
+            <p class="title-card">Administradores / Usuarios</p>
+
+            <div class="user-list">
+              <ul>
+                <li><app-profile-image-icon [sizePX]="28" [nameProfile]="'César Bolaños'"></app-profile-image-icon> </li>
+                <li><app-profile-image-icon [sizePX]="28" [nameProfile]="'María Jesús Olivares'"></app-profile-image-icon></li>
+                <li><app-profile-image-icon [sizePX]="28" [nameProfile]="'Pablo Martinez'"></app-profile-image-icon></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card box">
+          <div class="card-body">
+            <p class="title-card">Descargar reportes</p>
+
+            <div class="download-list">
+              <ul>
+                <li>
+                  <span class="icon">
+                    <img src="assets/svg/icon-pdf.svg" alt="icono PDF">
+                  </span>
+                  <span class="name">Reporte mensual de empleos subidos - Marzo 2021</span>
+                  <button type="button" class="btn btn-outline-primary py-1 px-5">Descargar</button>
+                </li>
+                <li>
+                  <span class="icon">
+                    <img src="assets/svg/icon-pdf.svg" alt="icono PDF">
+                  </span>
+                  <span class="name">Reporte mensual de empleos subidos - Marzo 2021</span>
+                  <button type="button" class="btn btn-outline-primary py-1 px-5">Descargar</button>
+                </li>
+                <li>
+                  <span class="icon">
+                    <img src="assets/svg/icon-pdf.svg" alt="icono PDF">
+                  </span>
+                  <span class="name">Reporte mensual de empleos subidos - Marzo 2021</span>
+                  <button type="button" class="btn btn-outline-primary py-1 px-5">Descargar</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
